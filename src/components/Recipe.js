@@ -32,7 +32,6 @@ const Recipe = () =>{
     const updateUrl = (event) => {
         event.preventDefault()
         setUrl(`https://www.food2fork.com/api/search?key=${API_key}&q=${query}&page=1`)
-        console.log('fetched data for queries')
         setQuery('')
     }
 

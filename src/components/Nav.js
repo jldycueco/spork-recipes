@@ -6,16 +6,17 @@ import image from '../assets/images/spork.png'
 const Nav = ()=>{
     return (
         <div className = "Nav">
-            <Link to= '/'>
-                <ul>
+            <ul>
+                <Link to= '/'>
                     <li>
                         <img src = {image}alt = {image}/>
                     </li>
                     <li>
                         SPORK
                     </li>
-                </ul>
-            </Link>
+                </Link>
+            </ul>
+
         </div>
     )
 }
