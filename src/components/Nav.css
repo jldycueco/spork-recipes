@@ -1,0 +1,18 @@
+.Nav ul{
+    display: flex;
+    direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 56px;
+    font-size: 30px;
+  }
+  
+  .Nav img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px; 
+  }
