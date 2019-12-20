@@ -35,7 +35,9 @@ const NavBarComponent = () => {
 
   return (
     <Navbar color="dark" dark expand="md">
-      <NavbarBrand href="/">My Recipe App</NavbarBrand>
+      <NavbarBrand href="/" style={{ textTransform: 'uppercase' }}>
+        Spork Recipes
+      </NavbarBrand>
       <Nav>
         <SearchBox />
       </Nav>
@@ -44,9 +46,6 @@ const NavBarComponent = () => {
         <Nav className="mr-auto" navbar>
           <NavItem>
             <NavLink href="/random">Surprise me</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="https://github.com">GitHub</NavLink>
           </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
@@ -65,8 +64,11 @@ const NavBarComponent = () => {
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
+
         <NavbarText>
-          <FontAwesomeIcon icon={['fab', 'github']} />
+          <NavLink href="https://github.com/jldycueco/spork-recipes">
+            Github <FontAwesomeIcon icon={['fab', 'github']} />
+          </NavLink>
         </NavbarText>
       </Collapse>
     </Navbar>
