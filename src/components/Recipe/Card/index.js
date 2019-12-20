@@ -23,14 +23,18 @@ const RecipeCard = ({ title, img, source, video, id }) => {
         <CardBody>
           <CardTitle>{title}</CardTitle>
         </CardBody>
-        <CardImg top width="100%" src={img} alt="image" />
+        <CardImg top width="50%" src={img} alt="image" />
         <CardBody>
-          <CardLink href={source}>
-            <FontAwesomeIcon icon="external-link-alt" />
-          </CardLink>
-          <CardLink href={video}>
-            <FontAwesomeIcon icon={['fab', 'youtube']} />
-          </CardLink>
+          {source && (
+            <CardLink href={source}>
+              <FontAwesomeIcon icon="external-link-alt" />
+            </CardLink>
+          )}
+          {video && (
+            <CardLink href={video}>
+              <FontAwesomeIcon icon={['fab', 'youtube']} />
+            </CardLink>
+          )}
           <CardLink>
             <Button color="primary" onClick={() => handleClick(id)}>
               Show More
