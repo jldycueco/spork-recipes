@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Jumbotron, Button, Row, Col, CardColumns } from 'reactstrap';
+import { Jumbotron, Row, Col, CardColumns } from 'reactstrap';
 import RecipeCard from '../Card';
 import { SearchContext } from '../../../context/SearchContext';
 
@@ -26,8 +26,9 @@ const RecipeLayout = () => {
       <Row>
         <Col>
           <CardColumns>
-            {isError && <div>Error</div>}
-            {isLoading ? (
+            {isError ? (
+              <div>Page could not be loaded from server</div>
+            ) : isLoading ? (
               <div>Loading</div>
             ) : (
               Object.keys(fetchedData).length > 0 &&
